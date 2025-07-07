@@ -4,6 +4,8 @@ import {useState, useEffect} from 'react';
 import Layout from './component/Layout';
 import {Routes, Route} from 'react-router-dom';
 import Home from './component/home/Home';
+import Header from './component/header/Header'
+import Trailer from './component/trailer/Trailer'
 
 function App() {
   const [movies, setMovies]= useState();
@@ -20,18 +22,20 @@ function App() {
       console.log(err);
     }
   }
+
   useEffect(()=>
   {
     getMovies();
-  },[]
-  )
+  },[])
 
 
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route path="/" element={<Home movies={movies}/>} />
+          <Route path="/Trailer/:ytTrailerId" element={<Trailer/>} />
           </Route>
       </Routes>
     </div>

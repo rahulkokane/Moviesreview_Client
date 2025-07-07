@@ -1,0 +1,13 @@
+.custom-button {
+  color: white !important;
+  border-color: white !important;
+}
+
+.custom-link {
+  color: white !important;
+}
+
+.custom-link:hover {
+  color: #ccc !important; /* Optional: Change color on hover */
+  text-decoration: underline;
+}

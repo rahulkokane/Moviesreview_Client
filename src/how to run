@@ -1,0 +1,3 @@
+Get base URL for axiosConfig through ngrok (command: ngrok http 8080)
+add new url in axiosConfig 
+then npm run in terminal
